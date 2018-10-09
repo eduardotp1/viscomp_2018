@@ -1,7 +1,7 @@
 # Segmentação de Primeiro Plano e Plano de Fundo
-Filipe Borba - 6º Semestre
-Engenharia da Computação Insper
-Visão Computacional
+Filipe Borba - 6º Semestre<br>
+Engenharia da Computação Insper<br>
+Visão Computacional<br>
 
 ## Sumário
 
@@ -23,9 +23,11 @@ A ideia por trás do modelo de Codebook é criar um elemento chamado de Codeword
 O algoritmo do codebook possui duas funções auxiliares: Colordist e Brightness.
 A função colordist serve para verificar a distorção de cores de cada pixel da imagem, enquanto que a função brightness visa detectar mudanças no brilho de cada pixel. As duas funções podem ser vistas nas imagens 1 e 2.
 ![Brightness](https://i.imgur.com/gaJs3LE.png)
+<br>
 Imagem 1 - Função Brightness
 
 ![Colordist](https://i.imgur.com/l6JoE1T.png)
+<br>
 Imagem 2 - Função Colordist
 
 #### Estrutura Codebook
@@ -49,7 +51,10 @@ Imagem 3 - Pseudo-código do Codebook
 #### Subtração de Plano de Fundo
 Por fim, para realizar a subtração do plano de fundo, o algoritmo utiliza o codebook armazenado e compara o pixel com cada codeword. Assim, se houver coincidência, significa que o pixel faz parte do plano de fundo, caso contrário, faz parte do primeiro plano. Essa dinâmica fica clara com a imagem 4 a seguir.
 ![Subtracao](https://i.imgur.com/VMW7ljF.png)
+<br>
 Imagem 4 - Pseudo-código da subtração de plano de fundo utilizando o codebook.
 
 ## Resultados
+![resultado1](https://i.imgur.com/YIWPAWu.png)
 
+![resultado2](https://i.imgur.com/qqun12F.png)
