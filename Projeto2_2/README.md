@@ -22,11 +22,34 @@ A ideia por trás do modelo de Codebook é criar um elemento chamado de Codeword
 #### Funções Auxiliares
 O algoritmo do codebook possui duas funções auxiliares: Colordist e Brightness.
 A função colordist serve para verificar a distorção de cores de cada pixel da imagem, enquanto que a função brightness visa detectar mudanças no brilho de cada pixel. As duas funções podem ser vistas nas imagens 1 e 2.
+![Brightness](https://i.imgur.com/gaJs3LE.png)
+Imagem 1 - Função Brightness
+
+![Colordist](https://i.imgur.com/l6JoE1T.png)
+Imagem 2 - Função Colordist
 
 #### Estrutura Codebook
+Um codebook é basicamente uma lista que contém listas de codewords por pixel. O codeword é composto por um vetor que guarda o valor RGB da imagem e outro vetor que contém valores de brilho entre outras variáveis temporais. Nessa implementação, foram utilizadas tuplas para os dois elementos.
+Temos então na tupla RGB:
+- r: quantidade de vermelho que o pixel possui.
+- g: quantidade de verde que o pixel possui.
+- b: quantidade de azul que o pixel possui.
+E na tupla Aux:
+- min_brightness: menor brilho de todos os pixeis associados a este codeword armazenado
+- max_brightness: maior brilho de todos os pixeis associados a este codeword armazenado
+- freq: frequência com a qual esse codeword foi coincidido
+- mnrl: maior intervalo durante o periodo de treino que o codeword não coincidiu
+- first_access: primeira vez que o codeword armazenado coincidiu
+- last_access: ultima vez que o codeword armazenado coincidiu
+
+Na imagem 3, verifica-se a implementação dada no artigo.
+![Codebook](https://i.imgur.com/OwbGkIj.png)
+Imagem 3 - Pseudo-código do Codebook
 
 #### Subtração de Plano de Fundo
+Por fim, para realizar a subtração do plano de fundo, o algoritmo utiliza o codebook armazenado e compara o pixel com cada codeword. Assim, se houver coincidência, significa que o pixel faz parte do plano de fundo, caso contrário, faz parte do primeiro plano. Essa dinâmica fica clara com a imagem 4 a seguir.
+![Subtracao](https://i.imgur.com/VMW7ljF.png)
+Imagem 4 - Pseudo-código da subtração de plano de fundo utilizando o codebook.
 
 ## Resultados
 
-## Conclusão
