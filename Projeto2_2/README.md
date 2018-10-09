@@ -8,7 +8,6 @@ Visão Computacional<br>
 - [Introdução](#introducao)
 - [Codebook](#codebook)
 - [Resultados](#resultados)
-- [Conclusão](#conclusao)
 
 ## Introdução
 Artigo de referência: "Real-time foreground–background segmentation using codebook model"
@@ -53,6 +52,9 @@ Por fim, para realizar a subtração do plano de fundo, o algoritmo utiliza o co
 ![Subtracao](https://i.imgur.com/VMW7ljF.png)
 <br>
 Imagem 4 - Pseudo-código da subtração de plano de fundo utilizando o codebook.
+
+#### Contagem de Elementos
+A contagem de elementos foi feita utilizando o SimpleBlobDetector do OpenCV. Um Blob é um grupo de pixeis conectados numa imagem que compartilham uma propriedade em comum. Nas imagens, as partes brancas são os blobs e o SimpleBlobDetector tem por objetivo identificar e marcar essas regiões.
 
 ## Resultados
 ![resultado1](https://i.imgur.com/YIWPAWu.png)
