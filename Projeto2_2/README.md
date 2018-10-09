@@ -35,7 +35,10 @@ Temos então na tupla RGB:
 - r: quantidade de vermelho que o pixel possui.
 - g: quantidade de verde que o pixel possui.
 - b: quantidade de azul que o pixel possui.
+
+<br>
 E na tupla Aux:
+
 - min_brightness: menor brilho de todos os pixeis associados a este codeword armazenado
 - max_brightness: maior brilho de todos os pixeis associados a este codeword armazenado
 - freq: frequência com a qual esse codeword foi coincidido
