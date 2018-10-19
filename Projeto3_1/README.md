@@ -5,7 +5,20 @@ Visão Computacional<br>
 
 ## Sumário
 
+- [Dependências](#dependencias)
 - [Como executar](#comoexecutar)
+
+## Dependências
+O programa requer algumas dependências do python que podem ser instaladas via pip:
+- opencv-contrib-python (versão 3.4.0.12 obrigatoriamente)
+- os
+- matplotlib (matplotlib.pyplot)
+- numpy
+- scikit-learn (sklearn.cluster.KMeans)
+- scipy (scipy.stats.chisquare)
+- random (random.shuffle)
+- pickle
+- argparse
 
 ## Como executar
 
