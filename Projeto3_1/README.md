@@ -5,8 +5,8 @@ Visão Computacional<br>
 
 ## Sumário
 
-- [Dependências](#dependencias)
-- [Como executar](#comoexecutar)
+- [Dependências](#dependências)
+- [Como executar](#como-executar)
 
 ## Dependências
 O programa requer algumas dependências do python que podem ser instaladas via pip:
