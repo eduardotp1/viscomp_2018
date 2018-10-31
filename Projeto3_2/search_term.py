@@ -1,11 +1,11 @@
 import cv2
 import os
 from matplotlib import pyplot as plt
-from keras.preprocessing import image
-from keras.applications.mobilenet import preprocess_input, decode_predictions, MobileNet
 import numpy as np
 import pickle
 import argparse
+from keras.preprocessing import image
+from keras.applications.mobilenet import preprocess_input, decode_predictions, MobileNet
 
 def get_all_image_paths(dataset):
     paths = []
@@ -85,8 +85,9 @@ def find(term, show=False):
     if term in paths_dict:
         show_images(term, paths_dict, show)
     else:
+        print(list(paths_dict.keys()))
         print("ERROR: used term '" + term + "' not valid.")
-        print("Please use these terms instead: https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a")
+        print("Please use one of these terms above instead.")
         print("Write -h or --help for more information.")
         exit(1)
 
