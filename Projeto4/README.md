@@ -7,7 +7,7 @@ Visão Computacional<br>
 ## Sumário
 
 - [Como executar](#comoexecutar)
-- [Conceitos](#conceitos)
+- [Funcionamento](#funcionamento)
 
 ## Como executar
 
@@ -18,6 +18,8 @@ Com o caminho da imagem de substituição em mãos, basta rodar o seguinte coman
 
 - O caminho_ate_imagem é o argumento OBRIGATORIO para o caminho no qual se encontra a imagem.
 
-## Conceitos
+## Funcionamento
+
+  Primeiramente, o código pega a imagem do tabuleiro aruco digitalizada, detecta os marcadores nela e constrói uma lista com os pontos referentes as pontas dos marcadores. Em seguida ele começa a filmar com a webcam e para cada frame ele: detecta os marcadores do tabuleiro físico (que aperece na imagem da câmera); constrói uma nova lista somente com os pontos da imagem digitalizada que tem o mesmo id dos pontos identificados pela camera; com esses dois conjuntos de pontos calcula-se a *matriz de homografia*; é chamada a função *warpPerspective* do opencv. Essa última função recebe a imagem escolhida como parâmetro para o programa, aplica a homografia calculada nela, deixando-a com a perspectiva esperada e o resto da imagem ela deixa preta. Finalmente, pintamos o que não for preto dessa imagem sobre o frame atual, gerando a imagem com Realidade Aumentada.
 
 
